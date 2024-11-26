@@ -1,0 +1,136 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+$space-cadet: rgba(52, 52, 74, 1);
+$quinacridone-magenta: rgba(128, 71, 94, 1);
+$blush: rgba(204, 90, 113, 1);
+$buff: rgba(200, 155, 123, 1);
+$icterine: rgba(240, 247, 87, 1);
+
+$gradient-top: linear-gradient(0deg, #34344aff, #80475eff, #cc5a71ff, #c89b7bff, #f0f757ff);
+$gradient-right: linear-gradient(90deg, #34344aff, #80475eff, #cc5a71ff, #c89b7bff, #f0f757ff);
+$gradient-bottom: linear-gradient(180deg, #34344aff, #80475eff, #cc5a71ff, #c89b7bff, #f0f757ff);
+$gradient-left: linear-gradient(270deg, #34344aff, #80475eff, #cc5a71ff, #c89b7bff, #f0f757ff);
+$gradient-top-right: linear-gradient(45deg, #34344aff, #80475eff, #cc5a71ff, #c89b7bff, #f0f757ff);
+$gradient-bottom-right: linear-gradient(135deg, #34344aff, #80475eff, #cc5a71ff, #c89b7bff, #f0f757ff);
+$gradient-top-left: linear-gradient(225deg, #34344aff, #80475eff, #cc5a71ff, #c89b7bff, #f0f757ff);
+$gradient-bottom-left: linear-gradient(315deg, #34344aff, #80475eff, #cc5a71ff, #c89b7bff, #f0f757ff);
+$gradient-radial: radial-gradient(#34344aff, #80475eff, #cc5a71ff, #c89b7bff, #f0f757ff);
+
+:root {
+    background-color: $space-cadet;
+    height: 200vh;
+    min-height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.title {
+  font-family: "Quicksand", serif;
+  text-align: center;
+  width: 100%;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 6em;
+  background-image: linear-gradient(to right, #cc5a71ff, #c89b7bff, #f0f757ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+}
+
+.section-container {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+}
+
+.start-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.slideshow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  object-fit: cover;
+  transition: opacity 1s ease-in-out;
+  filter: blur(2px);
+  
+  &.active {
+    opacity: 1;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.gradient-overlay {
+  background: radial-gradient(
+    circle at center,
+    rgba(52, 52, 74, 0.6) 0%, // Lighter space-cadet in center
+    rgba(52, 52, 74, 0.9) 100% // More opaque space-cadet at edges
+  );
+  z-index: 2;
+}
+
+.blur-overlay {
+  backdrop-filter: blur(8px);
+  z-index: 1;
+}
+
+.start-section-content {
+  background-color: $space-cadet;
+  @media (min-width: 1440px) {
+    width: 880px;
+    height: 500px;
+  }
+  @media (min-width: 1920px) {
+    width: 1100px;
+    height: 625px;
+  }
+  @media (min-width: 2560px) {
+    width: 1000px;
+    height: 600px;
+  }
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  border-radius: 30px;
+  box-shadow: 0 0 100px 0 $space-cadet;
+}
