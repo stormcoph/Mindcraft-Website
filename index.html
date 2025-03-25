@@ -3,13 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mindcraft</title>
+    <title>Mindcraft Unofficial - Fan Site by stormcph</title>
     <link rel="icon" href="assets/icons/favicon.ico">
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="section-container start-section">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">Mindcraft</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#features">Features</a>
+                <a href="#get-started">Get Started</a>
+                <a href="#documentation">Docs</a>
+                <a href="#community">Community</a>
+                <a href="#faq">FAQ</a>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div id="home" class="section-container start-section">
         <div class="slideshow">
             <img src="assets/images/frame_00018.jpg" class="slide active">
             <img src="assets/images/frame_00021.jpg" class="slide">
@@ -21,7 +42,434 @@
         <div class="overlay blur-overlay"></div>
         <div class="start-section-content">
             <h1 class="title">Mindcraft</h1>
+            <p class="tagline">Crafting minds for Minecraft with LLMs</p>
+            <div class="unofficial-notice">
+                <p>This is an <strong>unofficial fan site</strong> created by stormcph</p>
+            </div>
+            <div class="hero-buttons">
+                <a href="#get-started" class="btn btn-primary">Get Started</a>
+                <a href="https://github.com/kolbytn/mindcraft" class="btn btn-secondary">View on GitHub</a>
+            </div>
+            <div class="security-notice">
+                <i class="fas fa-shield-alt"></i>
+                <p>Warning: Do not connect this bot to public servers with coding enabled. This project allows an LLM to write/execute code on your computer.</p>
+            </div>
         </div>
     </div>
+
+    <!-- About Section -->
+    <div id="about" class="section-container">
+        <div class="section-content">
+            <h2 class="section-title">About Mindcraft</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>Mindcraft creates intelligent AI agents for Minecraft using Large Language Models and Mineflayer. These bots can understand natural language, learn from their environment, and execute complex tasks in the game world.</p>
+                    <p>Whether you're looking to experiment with AI, create helpful assistants, or just add some company to your Minecraft world, Mindcraft makes it easy to bring intelligent bots into your game.</p>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/gRotoL8P8D8" title="Mindcraft Video Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="quick-links">
+                <a href="https://github.com/kolbytn/mindcraft/blob/main/FAQ.md" class="quick-link">
+                    <i class="fas fa-question-circle"></i>
+                    <span>FAQ</span>
+                </a>
+                <a href="https://discord.gg/mp73p35dzC" class="quick-link">
+                    <i class="fab fa-discord"></i>
+                    <span>Discord Support</span>
+                </a>
+                <a href="https://kolbynottingham.com/mindcraft/" class="quick-link">
+                    <i class="fas fa-book"></i>
+                    <span>Blog Post</span>
+                </a>
+                <a href="https://github.com/users/kolbytn/projects/1" class="quick-link">
+                    <i class="fas fa-tasks"></i>
+                    <span>Contributor TODO</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div id="features" class="section-container">
+        <div class="section-content">
+            <h2 class="section-title">Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-robot"></i>
+                    <h3>AI Agents</h3>
+                    <p>Create bots with unique personalities that can converse naturally and learn from experience.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Code Execution</h3>
+                    <p>Enable bots to write and execute custom code for more advanced behaviors and problem solving.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>Multiple LLM Support</h3>
+                    <p>Choose from various LLM providers including OpenAI, Anthropic, Google, and many more.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-user-edit"></i>
+                    <h3>Customizable Profiles</h3>
+                    <p>Create and modify bot personalities, knowledge, and capabilities through profile settings.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-server"></i>
+                    <h3>Server Connectivity</h3>
+                    <p>Connect to local or online multiplayer servers with proper account authentication.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fab fa-docker"></i>
+                    <h3>Docker Support</h3>
+                    <p>Run in a container for improved security when using code execution capabilities.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Get Started Section -->
+    <div id="get-started" class="section-container">
+        <div class="section-content">
+            <h2 class="section-title">Get Started</h2>
+            <div class="requirements">
+                <h3>Requirements</h3>
+                <ul class="requirements-list">
+                    <li><i class="fas fa-cubes"></i> Minecraft Java Edition (up to v1.21.1, recommend v1.20.4)</li>
+                    <li><i class="fab fa-node-js"></i> Node.js Installed (at least v14)</li>
+                    <li><i class="fas fa-key"></i> One API key from: OpenAI, Gemini, Anthropic, Replicate, Hugging Face, Groq, or Ollama installed</li>
+                </ul>
+            </div>
+            <div class="installation-steps">
+                <h3>Installation Steps</h3>
+                <ol class="step-list">
+                    <li>
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Clone the Repository</h4>
+                            <div class="code-box">
+                                <code>git clone https://github.com/kolbytn/mindcraft.git</code>
+                                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Configure API Keys</h4>
+                            <p>Rename <code>keys.example.json</code> to <code>keys.json</code> and add your API key</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Install Dependencies</h4>
+                            <div class="code-box">
+                                <code>npm install</code>
+                                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Start Minecraft</h4>
+                            <p>Start a Minecraft world and open to LAN on port 55916</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h4>Run Mindcraft</h4>
+                            <div class="code-box">
+                                <code>node main.js</code>
+                                <button class="copy-btn"><i class="fas fa-copy"></i></button>
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <!-- Documentation Section -->
+    <div id="documentation" class="section-container">
+        <div class="section-content">
+            <h2 class="section-title">Documentation</h2>
+            <div class="docs-tabs">
+                <button class="tab-btn active" data-tab="profiles">Bot Profiles</button>
+                <button class="tab-btn" data-tab="models">Model Configuration</button>
+                <button class="tab-btn" data-tab="servers">Server Connection</button>
+                <button class="tab-btn" data-tab="dev">Developer Reference</button>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane active" id="profiles">
+                    <h3>Bot Profiles</h3>
+                    <p>Bot profiles are JSON files (such as <code>andy.json</code>) that define:</p>
+                    <ul>
+                        <li>Bot backend LLMs to use for talking, coding, and embedding</li>
+                        <li>Prompts used to influence the bot's behavior</li>
+                        <li>Examples help the bot perform tasks</li>
+                    </ul>
+                    <div class="code-box code-large">
+<pre><code>{
+  "name": "Andy",
+  "model": "gpt-4o",
+  "code_model": {
+    "api": "openai",
+    "model": "gpt-4"
+  },
+  "embedding": {
+    "api": "openai",
+    "model": "text-embedding-ada-002"
+  }
+}</code></pre>
+                    </div>
+                </div>
+                <div class="tab-pane" id="models">
+                    <h3>Model Configuration</h3>
+                    <table class="model-table">
+                        <thead>
+                            <tr>
+                                <th>API</th>
+                                <th>Config Variable</th>
+                                <th>Example Model</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>OpenAI</td>
+                                <td>OPENAI_API_KEY</td>
+                                <td>gpt-4o-mini</td>
+                            </tr>
+                            <tr>
+                                <td>Google</td>
+                                <td>GEMINI_API_KEY</td>
+                                <td>gemini-pro</td>
+                            </tr>
+                            <tr>
+                                <td>Anthropic</td>
+                                <td>ANTHROPIC_API_KEY</td>
+                                <td>claude-3-haiku-20240307</td>
+                            </tr>
+                            <tr>
+                                <td>Ollama (local)</td>
+                                <td>n/a</td>
+                                <td>llama3</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a href="#" class="view-more">View all supported models →</a>
+                </div>
+                <div class="tab-pane" id="servers">
+                    <h3>Server Connection</h3>
+                    <div class="server-options">
+                        <div class="server-option">
+                            <h4>Local Server</h4>
+                            <p>By default, Mindcraft connects to a local Minecraft server on port 55916.</p>
+                        </div>
+                        <div class="server-option">
+                            <h4>Online Servers</h4>
+                            <p>To connect to online servers, your bot needs a Microsoft/Minecraft account.</p>
+                            <div class="code-box">
+<pre><code>// In settings.js
+"host": "111.222.333.444",
+"port": 55920,
+"auth": "microsoft"</code></pre>
+                            </div>
+                            <p class="note">⚠️ Important: The bot's name in profile.json must exactly match the Minecraft profile name!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="dev">
+                    <h3>Developer Reference</h3>
+                    <div class="dev-resources">
+                        <div class="dev-resource">
+                            <h4>Docker Container</h4>
+                            <p>For safer code execution, run in a Docker container:</p>
+                            <div class="code-box">
+<pre><code>docker run -i -t --rm -v $(pwd):/app -w /app -p 3000-3003:3000-3003 node:latest node main.js
+
+# Or simply
+docker-compose up</code></pre>
+                            </div>
+                        </div>
+                        <div class="dev-resource">
+                            <h4>Command Line Profiles</h4>
+                            <p>Specify profiles via command line:</p>
+                            <div class="code-box">
+                                <code>node main.js --profiles ./profiles/andy.json ./profiles/jill.json</code>
+                            </div>
+                        </div>
+                        <div class="dev-resource">
+                            <h4>Patches</h4>
+                            <p>To add a patch, change your local node module file and run:</p>
+                            <div class="code-box">
+                                <code>npx patch-package [package-name]</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Community Section -->
+    <div id="community" class="section-container">
+        <div class="section-content">
+            <h2 class="section-title">Join Our Community</h2>
+            <div class="community-options">
+                <a href="https://discord.gg/mp73p35dzC" class="community-card">
+                    <i class="fab fa-discord"></i>
+                    <h3>Discord</h3>
+                    <p>Join our Discord server for support, discussions, and to connect with other users</p>
+                    <span class="btn btn-small">Join Now</span>
+                </a>
+                <a href="https://github.com/kolbytn/mindcraft" class="community-card">
+                    <i class="fab fa-github"></i>
+                    <h3>GitHub</h3>
+                    <p>Contribute to the project, report issues, or browse the source code</p>
+                    <span class="btn btn-small">View Repository</span>
+                </a>
+                <a href="https://github.com/users/kolbytn/projects/1" class="community-card">
+                    <i class="fas fa-tasks"></i>
+                    <h3>Contributor Roadmap</h3>
+                    <p>See what features we're working on and how you can help</p>
+                    <span class="btn btn-small">View Roadmap</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div id="faq" class="section-container">
+        <div class="section-content">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>Is it safe to use code execution?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Code execution is disabled by default for safety. If enabled, the code is sandboxed but still vulnerable to injection attacks. We recommend using Docker when enabling code execution and never connecting to public servers with code execution enabled.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>What Minecraft versions are supported?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Mindcraft supports Minecraft Java Edition up to v1.21.1, with v1.20.4 being the recommended version for best compatibility.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>Which LLM provider should I use?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Different LLMs have different strengths. OpenAI's models tend to perform well for general tasks, Claude excels at following complex instructions, and local models like those from Ollama offer privacy and no usage costs. We recommend trying different models to see which works best for your use case.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>Can I connect to online multiplayer servers?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Yes, but you'll need an official Microsoft/Minecraft account for your bot. Configure the host, port, and authentication in settings.js. Remember that the bot's name in the profile.json must exactly match the Minecraft profile name.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>How do I customize my bot's personality?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Edit the bot's profile JSON file to customize prompts, examples, and behavior instructions. You can create entirely new profiles or modify existing ones like andy.json.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Mindcraft</h2>
+                <p>Crafting minds for Minecraft with LLMs</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Navigation</h3>
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#features">Features</a>
+                    <a href="#get-started">Get Started</a>
+                    <a href="#documentation">Documentation</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <a href="https://github.com/kolbytn/mindcraft/blob/main/FAQ.md">FAQ</a>
+                    <a href="https://discord.gg/mp73p35dzC">Discord Support</a>
+                    <a href="https://kolbynottingham.com/mindcraft/">Blog</a>
+                    <a href="https://www.youtube.com/watch?v=gRotoL8P8D8">Video Tutorial</a>
+                </div>
+                <div class="footer-column">
+                    <h3>GitHub</h3>
+                    <a href="https://github.com/kolbytn/mindcraft">Repository</a>
+                    <a href="https://github.com/users/kolbytn/projects/1">Contributor TODO</a>
+                    <a href="https://github.com/kolbytn/mindcraft/issues">Issues</a>
+                    <a href="https://github.com/kolbytn/mindcraft/pulls">Pull Requests</a>
+                </div>
+            </div>
+        </div>
+        <div class="about-creator">
+            <h2>About the Creator</h2>
+            <div class="creator-card">
+                <div class="creator-info">
+                    <img src="https://github.com/stormcoph.png" alt="stormcph" class="creator-avatar">
+                    <div class="creator-details">
+                        <h3>stormcph</h3>
+                        <p>Creator of this unofficial Mindcraft fan site</p>
+                        <div class="creator-links">
+                            <a href="https://stormcoph.github.io/website/" target="_blank" class="creator-link">
+                                <i class="fas fa-globe"></i> Personal Website
+                            </a>
+                            <a href="https://github.com/stormcoph" target="_blank" class="creator-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <div class="creator-link">
+                                <i class="fab fa-discord"></i> Discord: stormcph
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="creator-disclaimer">
+                    <p>I made this website because i was bored and the mindcraft project has no official website.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="citation">
+                <h3>Original Project Citation</h3>
+                <div class="code-box">
+<pre><code>@misc{mindcraft2023,
+    Author = {Kolby Nottingham and Max Robinson},
+    Title = {MINDcraft: LLM Agents for cooperation, competition, and creativity in Minecraft},
+    Year = {2023},
+    url={https://github.com/kolbytn/mindcraft}
+}</code></pre>
+                </div>
+            </div>
+            <p class="copyright">© 2025 Fan site by stormcph | Mindcraft is © 2023-2025 by its original creators</p>
+        </div>
+    </footer>
 </body>
 </html>
